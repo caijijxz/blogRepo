@@ -1,0 +1,28 @@
+**/pom.xml.versionsBackup
+**/target/
+**/out/
+*.class
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+.idea/
+/nbproject
+*.ipr
+*.iws
+*.iml
+
+.DS_Store
+**/.DS_Store
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.log
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+**/transaction-logs/
+pom.xml.versionsBackup
+build/
+!maven-wrapper.jar
+/ecloud-app-user/src/test/
+

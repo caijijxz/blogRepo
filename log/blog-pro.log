@@ -1,0 +1,4 @@
+2020-03-26 17:18:13.034  INFO 19248 --- [restartedMain] com.jxz.BlogApplication                  : Starting BlogApplication on LAPTOP-FV8Q74B0 with PID 19248 (G:\IdeaProjects\blog\target\classes started by 姜XZ in G:\IdeaProjects\blog)
+2020-03-26 17:18:13.054  INFO 19248 --- [restartedMain] com.jxz.BlogApplication                  : The following profiles are active: pro
+2020-03-26 17:18:18.906  WARN 19248 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-26 17:18:20.193  INFO 19248 --- [restartedMain] com.jxz.BlogApplication                  : Started BlogApplication in 8.769 seconds (JVM running for 11.709)

@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
@@ -21,8 +22,13 @@ public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificat
     Page<Blog> findByQuery(String query, Pageable pageable);
 
     @Modifying
-    @Query("update Blog b set b.views = b.views+1 where b.id = ?1")
+    @Query("update Blog b set b.views = b.views where b.id = ?1")
     int updateViews(Long id);
+
+    @Transactional
+    @Modifying
+    @Query("update Blog b set b.views = ?2 where b.id = ?1")
+    int updateViews(Long id, int viewCount);
 
     @Query("select function('date_format',b.updateTime,'%Y') as year from Blog b group by function('date_format',b.updateTime,'%Y') order by year desc")
     List<String> findGroupYear();

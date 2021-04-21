@@ -1,5 +1,7 @@
 package com.jxz.po;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -101,6 +103,7 @@ public class User {
         this.updateTime = updateTime;
     }
 
+    @JsonBackReference
     public List<Blog> getBlogs() {
         return blogs;
     }
